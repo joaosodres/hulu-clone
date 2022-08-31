@@ -13,7 +13,7 @@ function Nav() {
                 overflow-x-scroll scrollbar-hide">
 
                 {Object.entries(requests).map(([key, { title, url }]) => (
-                    <h2
+                    <button
                         key={key}
                         onClick={() => { router.push(`/?genre=${key}`); }}
                         className=" last:pr-24 cursor-pointer transition duration-100 
@@ -21,7 +21,7 @@ function Nav() {
                 active:text-red-500"
                     >
                         {title}
-                    </h2>
+                    </button>
                 ))}
             </div>
             <div className='absolute top-0 right-0 bg-gradient-to-l
